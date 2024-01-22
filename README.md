@@ -35,7 +35,8 @@ const codigosYEnlaces = [
     { codigo: "ADVT-C-0001-2001024", enlace: "https://res.cloudinary.com/jpvtutoriales/image/upload/v1705888137/CERTIFICADO_DE_ELIAN_ALEXANDER_PEREZ_CASTILLO.png" },
     // ... (otros códigos y enlaces)
 ];
-Colaboración y Compartir
+
+## Colaboración y Compartir
 Siéntete libre de colaborar y mejorar este proyecto. Puedes hacerlo de las siguientes maneras:
 
 Clonando el repositorio y enviando pull requests.
@@ -43,13 +44,15 @@ Reportando problemas o sugiriendo mejoras mediante la sección de "Issues".
 Licencia
 Este proyecto está bajo la Licencia MIT. Consulta el archivo LICENSE para más detalles.
 
-Redes Sociales
+## Redes Sociales
 ¡Síguenos en nuestras redes sociales para estar al tanto de las últimas actualizaciones y proyectos!
 
 Twitter
 Instagram
 LinkedIn
-Agradecimientos
+
+## Agradecimientos
+
 Queremos expresar nuestro agradecimiento a todos los colaboradores y usuarios que han contribuido y utilizado este generador de códigos QR. ¡Esperamos que les sea de utilidad!
 
-¡Gracias por tu interés y apoyo!
+## ¡Gracias por tu interés y apoyo!
