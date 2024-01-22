@@ -1,126 +1,18 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Generador de Códigos QR</title>
+    <title>GENERADOR DE QR Y URL</title>
+    <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f4f4f4;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            margin: 0;
-            flex-direction: column;
-        }
-
-        h2 {
-            margin: 50px 0 20px 0;
-            font-size: 2em;
-            text-align: center;
-            color: #3498db;
-            font-weight: bold;
-        }
-
-        #qrcodes {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        .qr-code-container {
-            margin: 10px;
-            text-align: center;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-        }
-
-        .qr-code-container a {
-            display: block;
-            padding: 10px;
-            background-color: #3498db;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 0 0 8px 8px;
-            transition: background-color 0.3s;
-        }
-
-        .qr-code-container a:hover {
-            background-color: #2980b9;
-        }
-
-        @media (max-width: 600px) {
-            h2 {
-                margin-top: 50px;
-                font-size: 1.5em;
-            }
-        }
-    </style>
 </head>
 <body>
-    <br>
-    <br>
-    <br>
+    
     <h2>Codigo QR Charla Sobre Marca Personal y Creacion de Portafolio Web</h2>
     <div id="qrcodes"></div>
 
-    <script>
-        // Lista de códigos y enlaces correspondientes
-        const codigosYEnlaces = [
-            { codigo: "ADVT-C-0001-2001024", enlace: "https://res.cloudinary.com/jpvtutoriales/image/upload/v1705888137/CERTIFICADO_DE_ELIAN_ALEXANDER_PEREZ_CASTILLO.png" },
-            { codigo: "ADVT-C-0002-2001024", enlace: "https://res.cloudinary.com/jpvtutoriales/image/upload/v1705889161/CERTIFICADO_DE_Lleury_Alexander_Heredia.png" },
-            { codigo: "ADVT-C-0003-2001024", enlace: "https://res.cloudinary.com/jpvtutoriales/image/upload/v1705889212/CERTIFICADO_DE_Aris_Manuel_Paniagua_Guzm%C3%A1n.png" },
-            { codigo: "ADVT-C-0004-2001024", enlace: "https://res.cloudinary.com/jpvtutoriales/image/upload/v1705889199/CERTIFICADO_DE_Biandel_Jesus_De_la_Cruz_Beriguete.png" },
-            { codigo: "ADVT-C-0005-2001024", enlace: "https://res.cloudinary.com/jpvtutoriales/image/upload/v1705889212/CERTIFICADO_DE_Edward_Adri%C3%A1n_D%C3%ADaz_Ram%C3%ADrez.png" },
-            { codigo: "ADVT-C-0006-2001024", enlace: "https://res.cloudinary.com/jpvtutoriales/image/upload/v1705889193/CERTIFICADO_DE_Johanni_Mej%C3%ADa_Reyes.png" },
-            { codigo: "ADVT-C-0007-2001024", enlace: "https://res.cloudinary.com/jpvtutoriales/image/upload/v1705889174/CERTIFICADO_DE_Paola_Cruz_Rodr%C3%ADguez.png" },
-            { codigo: "ADVT-C-0008-2001024", enlace: "https://res.cloudinary.com/jpvtutoriales/image/upload/v1705889160/CERTIFICADO_DE_Adamaris_S._D%C3%ADaz_Gonz%C3%A1lez.png" },
-            { codigo: "ADVT-C-0009-2001024", enlace: "https://res.cloudinary.com/jpvtutoriales/image/upload/v1705889172/CERTIFICADO_DE_Jos%C3%A9_Miguel_B%C3%A1ez.png" },
-            { codigo: "ADVT-C-0010-2001024", enlace: "https://res.cloudinary.com/jpvtutoriales/image/upload/v1705889161/CERTIFICADO_DE_Lleury_Alexander_Heredia.png" },
-            { codigo: "ADVT-C-0011-2001024", enlace: "https://res.cloudinary.com/jpvtutoriales/image/upload/v1705889153/CERTIFICADO_DE_Jos%C3%A9_Miguel_Ram%C3%ADrez_Montero.png" },
-            { codigo: "ADVT-C-0012-2001024", enlace: "https://res.cloudinary.com/jpvtutoriales/image/upload/v1705889120/CERTIFICADO_DE_Johanna_Massiel_Mart%C3%ADnez.png" },
-            { codigo: "ADVT-C-0013-2001024", enlace: "https://res.cloudinary.com/jpvtutoriales/image/upload/v1705889162/CERTIFICADO_DE_Dariel_Pe%C3%B1a_Adolfo_V%C3%A1squez.png" },
-            { codigo: "ADVT-C-0014-2001024", enlace: "https://res.cloudinary.com/jpvtutoriales/image/upload/v1705889108/CERTIFICADO_DE_Ambiorys_Garc%C3%ADa.png" },
-            { codigo: "ADVT-C-0015-2001024", enlace: " https://res.cloudinary.com/jpvtutoriales/image/upload/v1705893402/CERTIFICADO_DE_Riki_Rosario_Mart%C3%ADnez.png" },
-           
-           
-            // Agrega más códigos y enlaces según sea necesario
-        ];
-
-        function generarCodigosQR() {
-            const contenedorQR = document.getElementById("qrcodes");
-
-            codigosYEnlaces.forEach(({ codigo, enlace }) => {
-                // Empaquetar la URL dentro del código QR
-                const codigoEmpaquetado = "URL:" + enlace;
-
-                // Crear el código QR con el texto empaquetado
-                const qrContainer = document.createElement("div");
-                qrContainer.classList.add("qr-code-container");
-                const qr = new QRCode(qrContainer, {
-                    text: codigoEmpaquetado,
-                    width: 128,
-                    height: 128,
-                });
-
-                // Crear un enlace debajo del código QR
-                const enlaceElement = document.createElement("a");
-                enlaceElement.href = enlace;
-                enlaceElement.target = "_blank";
-                enlaceElement.textContent = "Abrir enlace";
-                qrContainer.appendChild(enlaceElement);
-
-                contenedorQR.appendChild(qrContainer);
-            });
-        }
-
-        // Llama a la función cuando la página se carga
-        window.onload = generarCodigosQR;
-    </script>
+    <script src="script.js"></script>
+    
 </body>
 </html>
