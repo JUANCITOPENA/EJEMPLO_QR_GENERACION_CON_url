@@ -30,11 +30,6 @@ Este proyecto consiste en un generador de códigos QR para certificados de parti
 
 Cada código QR enlaza a un certificado de participación único almacenado en la nube. La lista de códigos y enlaces está definida en el archivo JavaScript (`script.js`).
 
-```javascript
-const codigosYEnlaces = [
-    { codigo: "ADVT-C-0001-2001024", enlace: "https://res.cloudinary.com/jpvtutoriales/image/upload/v1705888137/CERTIFICADO_DE_ELIAN_ALEXANDER_PEREZ_CASTILLO.png" },
-    // ... (otros códigos y enlaces)
-];
 
 ## Colaboración y Compartir
 Siéntete libre de colaborar y mejorar este proyecto. Puedes hacerlo de las siguientes maneras:
