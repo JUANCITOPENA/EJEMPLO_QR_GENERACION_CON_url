@@ -7,16 +7,22 @@
     <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
     <style>
         body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
             display: flex;
             align-items: center;
             justify-content: center;
-            height: 100vh;
-            margin: 20px 0;
+            min-height: 100vh;
+            margin: 0;
             flex-direction: column;
         }
 
         h2 {
-            margin-bottom: 20px;
+            margin: 50px 0 20px 0;
+            font-size: 2em;
+            text-align: center;
+            color: #3498db;
+            font-weight: bold;
         }
 
         #qrcodes {
@@ -26,17 +32,40 @@
         }
 
         .qr-code-container {
-            margin: 0 10px 20px 10px;
-            text-align: center; /* Añadido para centrar el texto en el contenedor */
+            margin: 10px;
+            text-align: center;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
         }
 
         .qr-code-container a {
             display: block;
-            margin-top: 10px; /* Espacio entre el código QR y el enlace */
+            padding: 10px;
+            background-color: #3498db;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 0 0 8px 8px;
+            transition: background-color 0.3s;
+        }
+
+        .qr-code-container a:hover {
+            background-color: #2980b9;
+        }
+
+        @media (max-width: 600px) {
+            h2 {
+                margin-top: 50px;
+                font-size: 1.5em;
+            }
         }
     </style>
 </head>
 <body>
+    <br>
+    <br>
+    <br>
     <h2>Codigo QR Charla Sobre Marca Personal y Creacion de Portafolio Web</h2>
     <div id="qrcodes"></div>
 
