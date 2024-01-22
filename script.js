@@ -9,7 +9,7 @@ const codigosYEnlaces = [
     { codigo: "ADVT-C-0007-2001024", enlace: "https://res.cloudinary.com/jpvtutoriales/image/upload/v1705889174/CERTIFICADO_DE_Paola_Cruz_Rodriguez.png" },
     { codigo: "ADVT-C-0008-2001024", enlace: "https://res.cloudinary.com/jpvtutoriales/image/upload/v1705889160/CERTIFICADO_DE_Adamaris_S_Diaz_Gonzalez.png" },
     { codigo: "ADVT-C-0009-2001024", enlace: "https://res.cloudinary.com/jpvtutoriales/image/upload/v1705889172/CERTIFICADO_DE_Jose_Miguel_Baez.png" },
-    { codigo: "ADVT-C-0010-2001024", enlace: "https://res.cloudinary.com/jpvtutoriales/image/upload/v1705889161/CERTIFICADO_DE_Lleury_Alexander_Heredia.png" },
+    { codigo: "ADVT-C-0010-2001024", enlace: "https://res.cloudinary.com/jpvtutoriales/image/upload/v1705891324/CERTIFICADO_DE_Jeuris_De_Los_Santos_Peña.png" },
     { codigo: "ADVT-C-0011-2001024", enlace: "https://res.cloudinary.com/jpvtutoriales/image/upload/v1705889153/CERTIFICADO_DE_Jose_Miguel_Ramirez_Montero.png" },
     { codigo: "ADVT-C-0012-2001024", enlace: "https://res.cloudinary.com/jpvtutoriales/image/upload/v1705889120/CERTIFICADO_DE_Johanna_Massiel_Martinez.png" },
     { codigo: "ADVT-C-0013-2001024", enlace: "https://res.cloudinary.com/jpvtutoriales/image/upload/v1705889162/CERTIFICADO_DE_Dariel_Pena_Adolfo_Vasquez.png" },
